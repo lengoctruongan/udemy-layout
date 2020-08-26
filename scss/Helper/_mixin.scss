@@ -1,0 +1,81 @@
+@mixin styleText($color,$fs,$fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleForm($color,$focus-color)
+{
+    .header-form{
+        flex-grow: 6;
+        .input-group{
+            background-color:$color ;
+             border:1px solid $color;
+             
+             .form-control{
+                 background-color: transparent;
+                 border: transparent;
+                 border-radius: 0;
+                 padding: 10px 12px;
+                 &::placeholder{
+                    @include styleText($color-gray-4,$fs-1,$fw-normal);
+                }
+                 &:focus{
+                     background-color: $color-white-0;
+                     box-shadow: none;
+                     border-radius: 0;
+                     border-color: $focus-color;
+                     border-right: transparent;
+
+                     &:focus + .input-group-append{
+                        .input-group-text{
+                            background-color: $color-white-0;
+                            border: transparent;
+                            &:hover{
+                                background-color: $color-red-0;
+                                border-radius: 0;
+                                color: $color-white-0;
+                            }
+                        }
+                     }
+                 }
+             }
+             .input-group-append{
+                 
+                 .input-group-text{
+                     border-radius: 0;
+                     border: transparent;
+                     background-color: $color-white-cream;
+                     color: $color-red-0;
+                     &:hover{
+                                background-color: $color-red-0;
+                                border-radius: 0;
+                                color: $color-white-0;
+                                
+                     }
+                 }
+             }
+        }
+    }
+}
+@mixin styleButton($bg-color,$pd-x,$pd-y,$border,$bd-radius) {
+    background-color: $bg-color;
+    padding: $pd-x $pd-y;
+    border: 1px solid $border;
+    border-radius: $bd-radius;
+}
+@mixin hoverButton($bg-color,$border,$color){
+    background-color: $bg-color;
+    border-color:$border;
+    color:$color;
+}
+@mixin reponsive($screen){
+    @if map-has-key($map:$breakpoints, $key:$screen){
+        $value: map-get($map:$breakpoints ,$key:$screen);
+        @media screen and(max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "Nhập lại đi";
+    }
+}

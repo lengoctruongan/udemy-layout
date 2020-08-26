@@ -1,0 +1,67 @@
+.udemy-recomment{
+    background-color: $color-black-0;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 7px solid $color-red-2;
+    .top-recomment{
+        display: flex;
+        justify-content: space-between;
+        i{
+            @include styleText($color-white-0,32px,null)
+        }
+    }
+    .center-recomment{
+        margin: 30px 0;
+        padding: 0 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i{
+            @include styleText($color-white-0,32px,null);
+        }
+        .recomment-center--text{
+            text-align: center;
+            h3{
+                @include styleText($color-gray-5,$fs-2 + 2,$fw-bold);
+                
+            }
+            p{
+                @include styleText($color-gray-5,$fs-0,$fw-bold);
+            }
+            button{
+                @include styleText($color-white-0,$fs-0,$fw-bold);
+
+                @include styleButton($color-red-0,$fs-1 - 2,$fs-2 - 5,$color-red-0,5px);
+                &:hover{
+                    @include hoverButton($color-red-2,$color-red-2,$color-white-0);
+                }
+                
+
+            }
+        }
+    }
+    .bottom-recomment{
+        display: flex;
+        justify-content: space-between;
+        i{
+            @include styleText($color-white-0,32px,null);
+        }
+    }
+}
+@include reponsive("large"){
+    .udemy-recomment{
+        .top-recomment, .bottom-recomment{
+            display: none;
+        }
+    }
+    .center-recomment{
+        i{
+            display: none;
+        }
+        .recomment-center--text{
+            width: 100%;
+            
+            
+        }
+    }
+}

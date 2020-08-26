@@ -1,0 +1,83 @@
+header{
+    .header-left{
+        display: flex;
+        align-items: center;
+        .logo{
+            flex-grow: 1;
+            img{
+                width: 110px;
+                
+            }
+        }
+        .menu-dropdown{
+            flex-grow: 1;
+            @include styleText($color-black-0,$fs-1,$fw-normal);
+            
+            a{
+                @include styleText($color-black-0,$fs-1,$fw-normal);
+                text-decoration: none;
+                padding-left: $pd-0;;
+            }
+        }
+
+        @include styleForm($color-white-cream,$color-gray-4);
+        
+    }
+    .header-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 30px;
+        .udemy-business{
+            
+            a{
+                @include styleText($color-gray-4,$fs-1,$fw-normal);
+                text-decoration: none;
+                padding: 15px;
+            }
+        }
+        .udemy-tech{
+            
+            a{
+                @include styleText($color-gray-4,$fs-1,$fw-normal);
+                text-decoration: none;
+                padding: 15px;
+            }
+        }
+        .vertical-bricks{
+            // display: block;
+            width: 2px;
+            height: 30px;
+            border-right: 1px solid $color-gray-4;
+
+           
+        }
+}
+}
+@include reponsive("extra-large"){
+    header{
+        .header-right{
+            .udemy-business, .udemy-tech, .vertical-bricks{
+                display: none;
+            }
+        }
+    }
+}
+@include reponsive("large"){
+    header{
+        .header-right{
+            .login, .sign-up{
+                display: none;
+            }
+        }
+    }
+}
+@include reponsive("medium"){
+    header{
+        .header-left{
+            .menu-dropdown{
+                display: none;
+            }
+        }
+    }
+}

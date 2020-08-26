@@ -1,0 +1,11 @@
+.udemy-student{
+    padding-top: 40px;
+    h4{
+        @include styleText($color-black-0,$fs-2 - 1,$fw-normal);
+        text-align: center;
+    }
+   .student-content{
+       width: 90%;
+       margin: 0 auto;
+   }
+}

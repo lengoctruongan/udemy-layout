@@ -1,0 +1,25 @@
+.udemy-category{
+    padding: 40px 70px;
+    .catagory-content{
+        h2{
+            @include styleText($color-black-0,$fs-2 + 4,$fw-bold);
+        }
+        .catagory-list{
+
+            .catagory-list-item{
+                display: flex;
+                align-items: center;
+                box-shadow: 2px 2px 2px 1px rgba(104,111,122, .2);
+                padding: $pd-1 $pd-2;
+                margin-bottom: $mg-1 + 5;
+                i{
+                    @include styleText($color-gray-4,32px,null);
+                    margin-right: $mg-1;
+                }
+                h3{
+                    @include styleText($color-gray-4,$fs-0,$fw-normal);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.udemy-feedback{
+    padding: 50px 0;
+    background-color: $color-white-cream;
+    .feedback-content{
+        width: 90%;
+        margin: 0 auto;
+        h2{
+            @include styleText($color-black-0,$fs-2 + 4,$fw-bold);
+        }
+        .feedback-content--slide{
+            .item{
+                background-color: $color-white-0;
+                padding: 40px;
+            .image{
+                display: flex;
+                img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        }
+        .trust-by-text{
+            @include styleText($color-gray-4,$fs-1,$fw-normal);
+            margin-top: 30px;
+        }
+        .brand{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: $pd-2;
+        }
+        .udemy-intructor{
+            text-align: center;
+            padding: $pd-2 50px;
+            h3{
+                @include styleText($color-black-0,$fs-2 - 1,$fw-bold)
+            }
+            p{
+                @include styleText($color-black-0,$fs-0 + 1,$fw-normal);
+                line-height: 1.5em;
+            }
+            button{
+                @include styleText($color-white-0,$fs-0,$fw-bold);
+
+                @include styleButton($color-red-0,$fs-1 - 2,$fs-2 - 5,$color-red-0,5px);
+                &:hover{
+                    @include hoverButton($color-red-2,$color-red-2,$color-white-0);
+                }
+            }
+        }
+        .udemy-intructor-left{
+            border-right: 1px solid $color-gray-6;
+        }
+    }
+}

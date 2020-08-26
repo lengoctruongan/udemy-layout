@@ -1,0 +1,80 @@
+.udemy-cousers{
+    padding: 30px 70px;
+    .cousers-introduce{
+        background-color: $color-gray-5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // padding: 0 50px;
+        h2{
+            @include styleText($color-black-0,$fs-0 + 4,$fw-bold)
+        }
+        p{
+            @include styleText($color-black-0,$fs-0 + 1,$fw-normal)
+        }
+    }
+    .cousers-content{
+        .nav{
+            .nav-item{
+                .nav-link{
+                    @include styleText($color-black-0,$fs-0,$fw-normal);
+                    &:hover{
+                        border-color:transparent;
+
+                    }
+                }
+                .nav-link.active{
+                    border-color:transparent;
+                    border-bottom: 4px solid $color-blue;
+                }
+
+            }
+        }
+        .cousers-tab{
+            margin-top: 30px;
+            position: relative;
+            .card{
+                .card-body{
+                    .card-title{
+                        @include styleText($color-black-0,$fs-0,$fw-bold);
+                    }
+                    .card-text{
+                        @include styleText($color-gray-4,$fs-1 - 1,$fw-normal)
+                    }
+                    .rating{
+                        .rating__star{
+                            i{
+                                @include styleText($color-yellow,$fs-1,$fw-normal)
+                            }
+                        }
+                        .star-rating--reviews__stats{
+                            @include styleText($color-black-0,$fs-1 - 1,$fw-bold)
+                        }
+                        .star-rating--reviews__count{
+                            @include styleText($color-gray-4,$fs-1 - 1,$fw-normal)
+                        }
+                    }
+                    .price{
+                        text-align: right;
+                        .old-price{
+                            @include styleText($color-black-0,$fs-1,$fw-normal);
+                            text-decoration: line-through;
+        
+                        }
+                        .new-price{
+                            @include styleText($color-black-0,$fs-2 - 2,$fw-bold)
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+@include reponsive("large"){
+    .udemy-cousers{
+        .cousers-introduce{
+        display: none;
+    }
+}
+}

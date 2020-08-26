@@ -1,0 +1,22 @@
+.udemy-caroseul{
+    height: 500px;
+    background-image: url(../image/cover.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;;
+     .row{
+         width: 100%;
+    
+        .caroseul-text{
+           width: 100%;
+            h2{
+                @include styleText($color-white-0,40px,$fw-bold);
+            }
+            p{
+                @include styleText($color-white-0,$fs-2 - 2,$fw-normal);
+            }
+            @include styleForm($color-white-0,$color-white-0)
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.udemy-infor{
+    background:  linear-gradient(45deg,$color-red-0 0 , $color-red-1 100%);
+    padding:20px 70px;
+    .udemy-infor-item{
+        display: flex;
+        i{
+            @include styleText($color-white-0,47px,null);
+            margin-right: 10px;
+            
+
+        }
+        .infor-content{
+            p{
+                margin: 0;
+                @include styleText($color-white-0,$fs-0 + 2,$fw-normal)
+            }
+        }
+    }
+    .item1{
+        justify-content: left;
+    }
+    .item2{
+        justify-content: center;
+    }
+    .item3{
+        justify-content: right;
+    }
+    
+}
+@include reponsive("medium"){
+    .udemy-infor{
+        display: none;
+    }
+}

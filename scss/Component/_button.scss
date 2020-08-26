@@ -1,0 +1,15 @@
+.login{
+    @include styleText($color-gray-4,$fs-1 + 2,$fw-bold);
+    @include styleButton($color-white-0,$pd-1 + 1,$pd-1 + 2,$color-gray-4,5px);
+    &:hover{
+        @include hoverButton($color-white-0,$color-black-0,$color-black-0)
+    }
+}
+.sign-up{
+    @include styleText($color-white-0,$fs-1 + 2,$fw-bold);
+    @include styleButton($color-red-0,$pd-1 + 1,$pd-1 + 2,$color-red-0,5px);
+    &:hover{
+        @include hoverButton($color-red-2,$color-red-2,$color-white-0);
+        
+    }
+}
